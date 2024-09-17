@@ -1,0 +1,156 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+/* typing animation */
+.typing-wrapper {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #000;
+  animation: typing 3.5s steps(30, end) 1s both, blink 0.75s step-end infinite;
+  width: 0px;
+}
+
+.typing {
+  display: inline;
+  font-family: monospace;
+  white-space: nowrap;
+  font-size: 26px;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  from {
+      width: 0%;
+  }
+  to {
+      width: 35%;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+      border-color: transparent;
+  }
+  50% {
+      border-color: black;
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: azure;  
+}
+
+.layout {
+  display: flex;
+  gap: 29px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.form-group {
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: khaki;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 3.5s ease-in, visibility 0s 3.5s;
+}
+
+.form-group.show {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .8s ease-in, visibility 0s;
+}
+
+.form-title {
+  font-size: 26px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.form-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.p-5 {
+  padding: 8px;
+}
+
+button[name='submit'] {
+  padding: 8px;
+  font-weight: bold;
+  border-radius: 4px;
+  background-color: white;
+}
+
+button[name='submit']:hover {
+  background-color: lightseagreen;
+  color: white;
+}
+
+/* style bukti transaksi */
+
+.card-to-center {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: 800px;
+  height: 500px ;
+  background-color: white;  
+  border-radius: 12px;
+  box-shadow: 0px 0px 3px black;
+}
+.card-body {
+  height: 500px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  gap: 26px;
+  text-align: center;
+  font-size: 24px;
+}
+.primary-header {
+  font-size: 36px;
+  font-weight: 600;
+  color: #0d6efd;
+}
+.back-to {
+  margin-top: 18px;
+}
+.back-to a{
+  color: white;
+  background-color: #0d6efd;
+  padding: 12px 16px;
+  border-radius: 6px;
+  transition: 0.4s ease;  
+  opacity: 0.8;
+}
+.back-to a:hover {
+  opacity: 1;
+  transform: scale(1.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+}
+
+
